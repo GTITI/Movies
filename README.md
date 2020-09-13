@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Using https://www.themoviedb.org/ API
+
+Documentation can be found https://www.themoviedb.org/documentation/api
+
 ## Available Scripts
 
 In the project directory, you can run:
