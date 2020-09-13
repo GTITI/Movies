@@ -8,21 +8,11 @@ import "../../containers/TvShowDetails/TvShowDetails.scss";
 import { MyVerticallyCenteredModal } from "../Modal/Modal";
 
 async function getEpisode(tvShowId, seasonNr, episodeNr, setInfo) {
-  console.log(seasonNr);
   if (tvShowId && seasonNr && episodeNr) {
-    console.log(tvShowId, seasonNr, episodeNr);
     try {
       const tvShowInfo = await getEpisodeDetails(tvShowId, seasonNr, episodeNr);
-      // console.log(tvShowInfo);
       setInfo(tvShowInfo);
-      // this.setState({
-      //   loading: false,
-      //   tvShowInfo,
-      //   error: false,
-      // });
-    } catch (err) {
-      // this.setState({ loading: false, error: true });
-    }
+    } catch (err) {}
   }
 }
 

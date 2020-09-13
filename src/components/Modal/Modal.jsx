@@ -9,7 +9,7 @@ function getDirector(episode) {
     if (crewPersonel.job === "Director") {
       return crewPersonel.name + ", ";
     }
-    return '-';
+    return true;
   });
 }
 
@@ -36,7 +36,7 @@ export const MyVerticallyCenteredModal = (props) => {
             />
             <div className="tvShow-details-info">
               <div>
-                <strong>Director:</strong> {getDirector(props.episode)}
+                <strong>Director:</strong> {getDirector(props.episode) || '-'}
               </div>
               <div className="tvShow-details-info__overview">
                 <strong>TvShow Overview:</strong> {props.episode.overview}

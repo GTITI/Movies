@@ -39,7 +39,7 @@ export default class Season extends Component {
     }
 
     return (
-      <>
+      <div className='season'>
         <Breakpoint medium up>
           <h1>{season.name}</h1>
           <div className="tvShowSeason-list">
@@ -68,7 +68,7 @@ export default class Season extends Component {
               ))}
           </div>
         </Breakpoint>
-      </>
+      </div>
     );
   }
 }

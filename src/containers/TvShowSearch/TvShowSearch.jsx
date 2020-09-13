@@ -1,24 +1,24 @@
-import React, { Component } from 'react';
-import { Breakpoint } from 'react-socks';
-import * as tvShowAPI from '../../services/tvShowsAPI';
-import TvShowList from '../../components/TvShow/TvShowList';
-import './TvShowSearch.scss';
+import React, { Component } from "react";
+import { Breakpoint } from "react-socks";
+import * as tvShowAPI from "../../services/tvShowsAPI";
+import TvShowList from "../../components/TvShow/TvShowList";
+import "./TvShowSearch.scss";
 
 export default class TvShowSearch extends Component {
   state = {
-    value: '',
+    value: "",
     tvShows: null,
     error: false,
     loading: false,
     prevSearch: null,
   };
 
-  handleChange = event => {
+  handleChange = (event) => {
     event.preventDefault();
     this.setState({ value: event.target.value });
   };
 
-  handleSubmit = async event => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     try {
       this.setState({ loading: true });
@@ -27,9 +27,8 @@ export default class TvShowSearch extends Component {
         tvShows,
         loading: false,
         prevSearch: this.state.value,
-        value: '',
+        value: "",
       });
-
     } catch (err) {
       this.setState({ error: true, loading: false });
     }
@@ -76,30 +75,46 @@ export default class TvShowSearch extends Component {
         <h1>TvShow Search</h1>
         <form className="search-form-wrapper" onSubmit={this.handleSubmit}>
           <Breakpoint medium up>
-            <label className="search-label">
-              Search TvShow Titles Here:
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">
+                  Search TvShow Titles Here:
+                </span>
+              </div>
               <input
-                className="search-input"
                 type="text"
+                class="form-control"
+                aria-label="Large"
                 value={this.state.value}
                 onChange={this.handleChange}
                 placeholder="TvShow title"
+                aria-describedby="inputGroup-sizing-sm"
               />
-            </label>
-            <input type="submit" value="Search" />
+              <button class="btn btn-secondary" type="submit">
+                Search
+              </button>
+            </div>
           </Breakpoint>
           <Breakpoint small down>
-            <label className="search-label">
-              Search TvShow Titles Here:
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">
+                Search TvShow Titles Here:
+                </span>
+              </div>
               <input
-                className="search-input"
                 type="text"
+                class="form-control"
+                aria-label="Small"
                 value={this.state.value}
                 onChange={this.handleChange}
                 placeholder="TvShow title"
+                aria-describedby="inputGroup-sizing-sm"
               />
-            </label>
-            <input type="submit" value="Search" />
+              <button class="btn btn-secondary" type="submit">
+                Search
+              </button>
+            </div>
           </Breakpoint>
         </form>
         {tvShowInfo ? tvShowInfo : null}
