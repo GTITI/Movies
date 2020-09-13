@@ -1,0 +1,118 @@
+.tvShow-component {
+  display: flex;
+  margin: 20px 10px;
+  cursor: default;
+
+  .tvShow-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tvShow-poster {
+    border-radius: 10px;
+    border: solid #847f86 3px;
+  }
+
+  .tvShow-title {
+    padding: 0 30px;
+  }
+
+  .tvShow-overview {
+    padding: 0 20px;
+    font-family: monospace;
+    font-size: 16px;
+  }
+
+  .tvShow-released {
+    font-size: 18px;
+  }
+}
+.tvShowEpisode-component {
+  display: flex;
+  margin: 10px 5px;
+  cursor: default;
+
+
+  .tvShow-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tvShow-poster {
+    border-radius: 10px;
+    border: solid #847f86 3px;
+  }
+
+  .tvShow-title {
+    font-size: 20px;
+    padding: 0 15px;
+  }
+
+  .tvShow-overview {
+    padding: 0 10px;
+    font-family: monospace;
+    font-size: 12px;
+  }
+
+  .tvShow-released {
+    font-size: 14px;
+  }
+}
+
+.tvShow-component-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .tvShow-title {
+    padding: 0 30px;
+  }
+
+  .tvShow-poster {
+    border-radius: 10px;
+    border: solid #847f86 3px;
+    width: calc(100% - 20px);
+    min-width: 300px;
+  }
+
+  .tvShow-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tvShow-overview {
+    padding: 0 20px;
+    font-family: monospace;
+    font-size: 16px;
+  }
+
+  .tvShow-released {
+    font-size: 18px;
+  }
+}
+
+.tvShow-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tvShowSeason-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: rgba(132, 127, 134, 0.7);
+}
+
+.tvShow-list-mobile {
+  h3 {
+    margin: 50% auto;
+  }
+
+  .breakpoint__medium-down {
+    align-items: center;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,18 @@
+.tvShow-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .tvShow-list-mobile {
+    h3 {
+      margin: 50% auto;
+    }
+  
+    .breakpoint__medium-down {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+ 
