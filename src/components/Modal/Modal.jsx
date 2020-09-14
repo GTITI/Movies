@@ -29,14 +29,16 @@ export const MyVerticallyCenteredModal = (props) => {
       <Modal.Body>
         {props.episode && (
           <div className="tvShow-details-poster-wrapper">
-            <img
-              className="tvShow-details-poster"
-              src={`${BASE_POSTER_PATH}/w500${props.episode.still_path}`}
-              alt="tvShow poster"
-            />
+            {props.episode.still_path && (
+              <img
+                className="tvShow-details-poster"
+                src={`${BASE_POSTER_PATH}/w500${props.episode.still_path}`}
+                alt="tvShow poster"
+              />
+            )}
             <div className="tvShow-details-info">
               <div>
-                <strong>Director:</strong> {getDirector(props.episode) || '-'}
+                <strong>Director:</strong> {getDirector(props.episode) || "-"}
               </div>
               <div className="tvShow-details-info__overview">
                 <strong>TvShow Overview:</strong> {props.episode.overview}
